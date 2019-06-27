@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+
                 <div class="card-header">Home</div>
 
                 <div class="card-body">
@@ -13,9 +14,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                   Welcome!
                     <a href="home/messenger" class="btn-success btn">Messenger</a>
+                    <a href="home/files-group" class="btn-primary btn">Upload Image</a>
                 </div>
             </div>
         </div>

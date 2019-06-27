@@ -21,6 +21,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('messenger-component', require('./components/messenger/MessengerComponent.vue').default);
+Vue.component('upload-images', require('./components/uploadImage/UploadImages.vue').default);
+Vue.component('group-files', require('./components/fileGroup/fileGroup.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
