@@ -8,9 +8,12 @@
                         <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Chat - Miguel</h3>
                     </div>
                 </div>
+                <div class="btn btn-success">
+                   All messages {{ messages.length }}
+                </div>
                 <div class="panel-body msg_container_base">
                     <div v-for="(message, key) in messageInfo">
-                        <div class="row msg_container base_sent" v-if="message.user.id == myInfo.id">
+                        <div class="row msg_container base_sent" v-if="message.from_id == myInfo.id">
                             <div class="col-md-6 col-xs-6">
                                 <div class="messages msg_sent">
                                     <p>{{myInfo.name}} (YOU)</p>
@@ -30,7 +33,7 @@
                             </div>
                             <div class="col-md-6 col-xs-6">
                                 <div class="messages msg_receive">
-                                    <p>{{message.user.name}}</p>
+                                    <p>{{guestInfo.name}}</p>
                                     <p>{{message.message}}</p>
                                     <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
                                 </div>
@@ -61,7 +64,7 @@
 <script>
     export default {
         name: "MessengerComponent",
-        props: ['messages', 'myInfo'],
+        props: ['messages', 'myInfo', 'guestInfo'],
         data() {
             return {
                 ImagePath: 'http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg',
@@ -76,18 +79,16 @@
         mounted() {
             this.messageInfo = this.messages;
             this.getMessages();
+            console.log(this.messageInfo);
         },
         methods: {
-            makeChat(messageInfo) {
-                console.log(this.myInfo);
 
-            },
             SendMessage() {
 
                 let newMessage = {
                     'message' : this.inputValue,
-                    'user' : this.myInfo,
-                    'user_id' : this.myInfo.id
+                    'from_id' : this.myInfo.id,
+                    'to_id' : this.guestInfo.id
                 }
 
 
@@ -95,7 +96,6 @@
                     this.messageInfo.push(newMessage);
                     this.inputValue = '';
                     this.lastInsertMessageId = response.data;
-                    console.log(this.messageInfo.length);
                 })
 
 
@@ -103,13 +103,19 @@
             },
             getMessages() {
 
+                console.log(this.lastInsertMessageId);
                 this.polling = setInterval(() => {
 
                     if(this.lastInsertMessageId != '') {
                         var lastMessageId = {
                             'id' : this.lastInsertMessageId
                         };
-                    } else {
+                    }
+                    else if(this.messageInfo.length == 0) {
+                        alert()
+                       return false;
+                    }
+                    else {
                         var lastMessageId = {
                             'id' : this.messageInfo[this.messages.length - 1].id
                         };

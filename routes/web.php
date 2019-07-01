@@ -22,14 +22,10 @@ Route::middleware('auth')->group(function(){
 
     Route::prefix('/home')->group(function(){
         Route::get('/', 'HomeController@index')->name('home');
-        Route::get('/messenger', 'MessengerController@index');
-        Route::get('/upload-images/{id}', 'ImagesController@index');
-        Route::get('/files-group', 'FilesController@index');
+        Route::get('/messenger/{guestId}', 'MessengerController@index');
+        Route::get('/guest/{id}', 'GuestController@guestPage');
+        Route::post('/searchUser', 'GuestController@index');
         Route::post('/addMessages', 'MessengerController@create');
         Route::post('/getLastMessages', 'MessengerController@getLastMessages');
     });
-
-    Route::post('/uploadImage', 'ImagesController@uploadImage');
-    Route::post('/addRepository', 'FilesController@create');
-    Route::post('/deleteRepository', 'FilesController@delete');
 });

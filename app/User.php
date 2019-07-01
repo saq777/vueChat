@@ -42,13 +42,4 @@ class User extends Authenticatable
         $this->hasMany(Messenger::class, 'user_id', 'id');
     }
 
-    public function image()
-    {
-        $this->hasMany(Image::class, 'user_id', 'id');
-    }
-
-    public function file()
-    {
-        $this->hasMany(File::class, 'user_id', 'id');
-    }
 }

@@ -14,11 +14,19 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="home/messenger" class="btn-success btn">Messenger</a>
-                    <a href="home/files-group" class="btn-primary btn">Upload Image</a>
                 </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Search User
+                </button>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+<search-guest></search-guest>
+
 @endsection

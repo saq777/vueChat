@@ -15,7 +15,8 @@ class CreateMessengerTable extends Migration
     {
         Schema::create('messenger', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('from_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('to_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('message');
             $table->timestamps();
         });

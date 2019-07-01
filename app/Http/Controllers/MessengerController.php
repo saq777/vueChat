@@ -8,19 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class MessengerController extends Controller
 {
-    public function index()
-    {
-        $myInfo = Auth::user();
-
-        $messages = Messenger::with('user')->get();
-        return view('messenger.index', compact('messages', 'myInfo'));
-    }
 
     public function create(Request $request)
     {
         $data = $request->validate([
             'message' => 'required',
-            'user_id' => 'required|exists:users,id',
+            'from_id' => 'required|exists:users,id',
+            'to_id' => 'required|exists:users,id',
         ]);
 
         $message = Messenger::create($data);
@@ -33,6 +27,6 @@ class MessengerController extends Controller
             'id' => 'required|exists:messenger,id',
         ]);
 
-       return Messenger::with('user')->where('id', '>', $data['id'])->get();
+       return Messenger::where('id', '>', $data['id'])->get();
     }
 }
