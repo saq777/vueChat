@@ -67,7 +67,8 @@
                     console.log(this.attachments[i]);
                 }
 
-                document.getElementById('images-upload').value = []
+                let val = $("#images-upload").val();
+                val  = []
                 this.attachments = [];
 
 

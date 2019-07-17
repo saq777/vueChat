@@ -2,43 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df67e2cf-260d-4277-bd3c-aa5c4fc4e4ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/5Z7kkjV8CRyvODfxVUVA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/5amaEKAzrwwAoAyUsGWi.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/6CGcGxnrc5s2CyXy6B5l.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/6tL4vn6JreIDeBo5eAZv.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/7BtarkNjb71ARYF5KnoE.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/9pvtxcJgb3gxuPQMyr6Q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/Aue2Kiv3urhtx0YuR3CY.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/CwlbSU1gINCU4IQmhQ4N.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/Fl50WkqtZ9kAm4962CFV.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/Kan2EzjyyjRAy0kFVKS8.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/N31TJDALvYiYYCwIaba3.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/NbfkmCpGUrfpCbLHGT37.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/OIIXeW3QemKwObU8HLUU.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/Ryc2yo5kAknQ3LRSrpKd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/SmRCqr24p8Iqfd3sFnCJ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/T11vXFSot9ofFKWBuOv9.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/Tky69Xqu22kIjmyfu3to.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/TvAch4MUiPTEcAYF0AgS.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/cCmTnmyZbIPtBBU9T8P2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/drkJYcGoOBmzhXzP6GIw.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/faEojKIgQegnU5NWFu5C.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/ftUINx9px5mdEN5WpBDe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/kO8QDZEOzILsshsayDnC.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/lYF62yWj7ivDD9UTYmTL.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/nTC9bqqJlOTiIGH6xlz6.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/owK6s6JQWBQOaQYMBXyL.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/q3PnlWTmNZsRhNaLlhg7.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/rTKn4CNA61VNz48ObDF9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/shKvrprtffNphOJ9RzxU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/t887BHdmTTwJfV2vSccg.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/wC8AKtMtu8F95iDbOp9g.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/wCtBRx9igZ4fCO6sQlGH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/images-user-1/xElwaNs7oc9BOdjGwHIb.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/guest/GuestImagesComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/guest/guestImages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/File.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessengerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessengerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Messenger.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Messenger.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_25_111127_create_messenger_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_25_111127_create_messenger_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/messenger/MessengerComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/messenger/MessengerComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/uploadImage/UploadImages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/uploadImage/UploadImages.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/messenger/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/messenger/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -71,79 +51,92 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/uploadImage/UploadImages.vue">
+        <entry file="file://$PROJECT_DIR$/resources/views/guest/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/messenger/MessengerComponent.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" column="60" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="60" />
+            <state relative-caret-position="595">
+              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" />
+                <element signature="n#ui#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" />
+                <element signature="n#li#0;n#ui#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" />
+                <element signature="n#src#0;n#img#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/posts/upload-images.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessengerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            <state relative-caret-position="-9">
+              <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/posts/filesGroup.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Messenger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            <state relative-caret-position="272">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FilesController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            <state relative-caret-position="68">
+              <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
               <folding>
-                <element signature="e#40#53#0#PHP" expanded="true" />
+                <element signature="e#1260#1267#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/fileGroup/fileGroup.vue">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+            <state relative-caret-position="756">
+              <caret line="244" selection-start-line="244" selection-end-line="244" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/File.php">
+        <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
-              <folding>
-                <element signature="e#23#63#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -155,16 +148,12 @@
       <list>
         <option value="CSS File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mysql</find>
-      <find>row</find>
-      <find>ava</find>
-      <find>.msg_container_base</find>
-      <find>messages</find>
       <find>msg_sent</find>
       <find>base_sent</find>
       <find>col-md-1</find>
@@ -179,6 +168,22 @@
       <find>images</find>
       <find>validation</find>
       <find>body</find>
+      <find>app</find>
+      <find>guest-component</find>
+      <find>view('h</find>
+      <find>&lt;img</find>
+      <find>laravel</find>
+      <find>&lt;messenger-</find>
+      <find>addMessages</find>
+      <find>getLastMessages(</find>
+      <find>&lt;mes</find>
+      <find>search</find>
+      <find>card-body msg_card_body</find>
+      <find>v-for</find>
+      <find>user</find>
+      <find>user_img</find>
+      <find>rounded-circle user_img</find>
+      <find>9:00 AM, Today</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,31 +193,40 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_25_111127_create_messenger_table.php" />
-        <option value="$PROJECT_DIR$/app/Messenger.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MessengerController.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/messenger/MessengerComponent.vue" />
-        <option value="$PROJECT_DIR$/resources/views/messenger/index.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_26_114129_create_images_table.php" />
         <option value="$PROJECT_DIR$/resources/views/posts/upload-image.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_27_082321_create_files_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_27_082739_add_votes_to_images_table.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/File.php" />
         <option value="$PROJECT_DIR$/resources/views/posts/filesGroup.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/resources/views/posts/upload-images.blade.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/uploadImage/UploadImages.vue" />
-        <option value="$PROJECT_DIR$/app/Image.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImagesController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/js/components/fileGroup/fileGroup.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FilesController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/search/SearchUser.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/uploadImage/UploadImages.vue" />
+        <option value="$PROJECT_DIR$/app/Image.php" />
+        <option value="$PROJECT_DIR$/app/File.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/resources/views/guest/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/guest/GuestComponent.vue" />
+        <option value="$PROJECT_DIR$/resources/views/guest/guestImages.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/guest/GuestImagesComponent.vue" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_25_111127_create_messenger_table.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Messenger.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MessengerController.php" />
+        <option value="$PROJECT_DIR$/resources/views/messenger/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/messenger/MessengerComponent.vue" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
       </list>
     </option>
   </component>
@@ -314,7 +328,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,85 +373,19 @@
               <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueChat" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="fileGroup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="uploadImage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueChat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueChat" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images-user-1" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -481,17 +428,20 @@
       <workItem from="1561382505298" duration="5351000" />
       <workItem from="1561459913779" duration="14112000" />
       <workItem from="1561535620069" duration="23811000" />
-      <workItem from="1561622911007" duration="7618000" />
+      <workItem from="1561622911007" duration="19907000" />
+      <workItem from="1561709945552" duration="1917000" />
+      <workItem from="1563356622361" duration="18111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52517000" />
+    <option name="totallyTimeSpent" value="84834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20095949" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -504,7 +454,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.72806066" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.41603467" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.41603467" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.6201058" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -517,38 +467,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/ck7Z0Bpct7kRgvbb82eVUPZgnMKQj5QYbTTTjAsR.png" />
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/messenger/MessengerComponent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="118" column="46" selection-start-line="118" selection-start-column="46" selection-end-line="118" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/YcCuIKDJv3fBwuDeL7X3EKd7uHqn8HuU2aDygEKL.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/OnCzK6bueJNg2JPz2N2nkZbzlMI5boiLhcFiJCGW.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/GEA8y51fUIV8ikSVI1hZFyC6XeNO5CahS9AceOqE.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/FQzXdkQhlLp52q30vMLBsbJs9tVFXVnvUduVOo8N.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/Fq4io4BD73HnE2BKCCqaJSArDbGxELB2uUzPWuhc.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/F1iymJ9NXMEBpfHSWGViofLMRu04dvtaL4QSsD40.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/D5iAMlV0Owz6GowvSySPuKke31dVwWmUfraDFk0y.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/BHEDtWTRI6sjvfyBDI71t51Op99pFCGdu36a97FZ.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/517pMg765EKpfGEOTauT13u0pxG7bZ96zUmPRq9Q.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/2VE8AqhPjZYMUuQWEQg61kw7ApZMdVxKMEas1fL7.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/xVrlvpHaXQMEG80cfsuFxobJ9snqAUcbRnZNTUeI.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/XSbTPIHDk6poM6sOr46lKF6SCnGchGvFbR1Qv2Pj.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/wqkIdJoB5KUmlVjyTSZ49wvGNH3GriMw7CaoAQOo.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/vUawNDkyP6sG64Xhhc1ljHbhmMwTcFn93XUoK2oC.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/v9xrcI1BNAt4f5qkak3XA3ywgztH40VTJUrlcxe2.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/0HEPchXrd0H42D3qGEXkFVJHeHXK16a58CQz6wIw.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/K4wf9GxUZTkOTk7nRQpF3Oa7ZWeK10Yr1lGv2kYa.png" />
     <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/tAmZa4THVDmMt7IkIoijKzhuSunvec5dwdwQLooA.png" />
     <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/yQ3muIzRYf2wty79cilVjHQBfoLZ2WbLWqfx3ovK.png" />
     <entry file="file://$PROJECT_DIR$/storage/app/public/dummy/5uafRFgNYfuvGu2u2CUfMXHIKdRDpjh46UwTSZBe.png" />
@@ -572,24 +490,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/posts/upload-images.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/search/SearchUser.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/fileGroup/fileGroup.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+          <caret line="77" column="42" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/components/uploadImage/UploadImages.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="1071">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_26_114129_create_images_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_27_082739_add_votes_to_images_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="91" />
+        <state relative-caret-position="238">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -600,95 +542,229 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_27_082739_add_votes_to_images_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/File.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_26_114129_create_images_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="91" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/posts/filesGroup.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FilesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding>
             <element signature="e#23#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/posts/filesGroup.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        <state relative-caret-position="357">
+          <caret line="27" column="88" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="67" column="12" lean-forward="true" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
+        <state relative-caret-position="544">
+          <caret line="89" column="3" lean-forward="true" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/File.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/posts/upload-images.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="60" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/fileGroup/fileGroup.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+        <state relative-caret-position="338">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/uploadImage/UploadImages.vue">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GuestController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="357">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FilesController.php">
+    <entry file="file://$PROJECT_DIR$/resources/js/components/guest/GuestComponent.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+        <state relative-caret-position="170">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_25_111127_create_messenger_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/guest/guestImages.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/guest/GuestImagesComponent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="89" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/aff31f30ea2a1b0f4430bc069ffdc2226b3883cf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="70" lean-forward="true" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/messenger/MessengerComponent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" />
+            <element signature="n#ui#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" />
+            <element signature="n#li#0;n#ui#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" />
+            <element signature="n#src#0;n#img#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/messenger/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="63" lean-forward="true" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Messenger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/guest/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessengerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <folding>
+            <element signature="e#1260#1267#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

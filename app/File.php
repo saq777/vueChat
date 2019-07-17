@@ -17,6 +17,6 @@ class File extends Model
 
     public function image()
     {
-        $this->hasMany(Image::class, 'file_id', 'id');
+        return $this->hasMany(Image::class, 'file_id', 'id');
     }
 }

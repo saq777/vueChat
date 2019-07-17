@@ -8,7 +8,7 @@ class Messenger extends Model
 {
     protected $table = "Messenger";
 
-    protected $fillable = ['user_id', 'message'];
+    protected $fillable = ['from_id', 'to_id', 'message'];
 
     public function user()
     {

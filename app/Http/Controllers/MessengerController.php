@@ -20,7 +20,8 @@ class MessengerController extends Controller
     {
         $data = $request->validate([
             'message' => 'required',
-            'user_id' => 'required|exists:users,id',
+            'from_id' => 'required|exists:users,id',
+            'to_id' => 'required|exists:users,id',
         ]);
 
         $message = Messenger::create($data);
@@ -31,8 +32,41 @@ class MessengerController extends Controller
     {
         $data = $request->validate([
             'id' => 'required|exists:messenger,id',
+            'from_id' => 'required|exists:users,id',
+            'to_id' => 'required|exists:users,id',
         ]);
 
-       return Messenger::with('user')->where('id', '>', $data['id'])->get();
+        $messages = Messenger::Where(function($query) use ($request, $data)
+       {
+           $query->where("from_id",$request->from_id)
+               ->where("to_id",$request->to_id)
+               ->where('id', '>', $data['id']);
+       })
+           ->orWhere(function($query) use ($request, $data)
+           {
+               $query->Where("from_id",$request->to_id)
+                   ->Where("to_id",$request->from_id)
+                   ->where('id', '>', $data['id']);
+           })
+           ->get();
+
+        return json_encode($messages);
+    }
+
+    public function getMessages(Request $request)
+    {
+        $messages = Messenger::Where(function($query) use ($request)
+        {
+            $query->where("from_id",$request->from_id)
+                ->where("to_id",$request->to_id);
+        })
+            ->orWhere(function($query) use ($request)
+            {
+                $query->Where("from_id",$request->to_id)
+                    ->Where("to_id",$request->from_id);
+            })
+            ->get();
+
+        return json_encode($messages);
     }
 }

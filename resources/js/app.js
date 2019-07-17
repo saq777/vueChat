@@ -23,6 +23,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('messenger-component', require('./components/messenger/MessengerComponent.vue').default);
 Vue.component('upload-images', require('./components/uploadImage/UploadImages.vue').default);
 Vue.component('group-files', require('./components/fileGroup/fileGroup.vue').default);
+Vue.component('search-user', require('./components/search/SearchUser.vue').default);
+Vue.component('guest-component', require('./components/guest/GuestComponent.vue').default);
+Vue.component('guest-images-component', require('./components/guest/GuestImagesComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

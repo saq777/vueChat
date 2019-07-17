@@ -37,18 +37,20 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected $table = "users";
+
     public function messenger()
     {
-        $this->hasMany(Messenger::class, 'user_id', 'id');
+        return $this->hasMany(Messenger::class, 'user_id', 'id');
     }
 
-    public function image()
+    public function images()
     {
-        $this->hasMany(Image::class, 'user_id', 'id');
+        return $this->hasManyThrough('App\Image', 'App\File');
     }
 
-    public function file()
+    public function files()
     {
-        $this->hasMany(File::class, 'user_id', 'id');
+        return $this->hasMany(File::class);
     }
 }

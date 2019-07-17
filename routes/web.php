@@ -22,8 +22,10 @@ Route::middleware('auth')->group(function(){
 
     Route::prefix('/home')->group(function(){
         Route::get('/', 'HomeController@index')->name('home');
+        Route::get('/guest/{id}', 'GuestController@index')->name('home');
         Route::get('/messenger', 'MessengerController@index');
         Route::get('/upload-images/{id}', 'ImagesController@index');
+        Route::get('/files/{id}', 'GuestController@getGuestImages');
         Route::get('/files-group', 'FilesController@index');
         Route::post('/addMessages', 'MessengerController@create');
         Route::post('/getLastMessages', 'MessengerController@getLastMessages');
@@ -32,4 +34,7 @@ Route::middleware('auth')->group(function(){
     Route::post('/uploadImage', 'ImagesController@uploadImage');
     Route::post('/addRepository', 'FilesController@create');
     Route::post('/deleteRepository', 'FilesController@delete');
+    Route::post('/getUsers', 'HomeController@select');
+    Route::post('/get/messages', 'MessengerController@getMessages');
+
 });
