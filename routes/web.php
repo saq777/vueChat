@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function(){
         Route::get('/files-group', 'FilesController@index');
         Route::post('/addMessages', 'MessengerController@create');
         Route::post('/getLastMessages', 'MessengerController@getLastMessages');
+        Route::post('update/profile/picture', 'HomeController@updateProfile');
     });
 
     Route::post('/uploadImage', 'ImagesController@uploadImage');

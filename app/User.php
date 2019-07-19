@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'avatar'
     ];
 
     /**
@@ -41,7 +41,7 @@ class User extends Authenticatable
 
     public function messenger()
     {
-        return $this->hasMany(Messenger::class, 'user_id', 'id');
+        return $this->hasMany(Messenger::class, 'from_id', 'id');
     }
 
     public function images()

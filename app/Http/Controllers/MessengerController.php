@@ -12,8 +12,9 @@ class MessengerController extends Controller
     {
         $myInfo = Auth::user();
 
-        $messages = Messenger::with('user')->get();
-        return view('messenger.index', compact('messages', 'myInfo'));
+        $part = $this->getNewPartners($myInfo);
+
+        return view('messenger.index', compact('part', 'myInfo'));
     }
 
     public function create(Request $request)
@@ -69,4 +70,24 @@ class MessengerController extends Controller
 
         return json_encode($messages);
     }
+
+    public function getNewPartners($myInfo = null)
+    {
+
+        if($myInfo == null) {
+            $myInfo = Auth::user();
+        }
+
+        $part = [];
+        $partners = Messenger::with('user')->where('from_id', $myInfo->id)->orWhere('to_id', $myInfo->id)->get();
+
+        foreach($partners as $partner) {
+            $part[] = $partner->user;
+        }
+
+
+        return array_unique($part);
+
+    }
+
 }
