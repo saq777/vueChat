@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="card-body msg_card_body" >
-                            <div v-for="(message, key) in messageInfo">
+                            <div v-for="(message, key) in messages">
                                 <div class="d-flex justify-content-end mb-4" v-if="message.from_id == myInfo.id">
                                     <div class="msg_cotainer_send">
                                         <p>{{message.message}}</p>
@@ -180,7 +180,7 @@
         data() {
             return {
                 ImagePath: 'http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg',
-                messageInfo: [],
+                messages: [],
                 inputValue: '',
                 newMessage: [],
                 lastInsertMessageId: '',
@@ -198,67 +198,111 @@
         mounted() {
             // this.getMessages();
             this.friends = this.part
-            this.getPartners(this.partner)
+            // this.getPartners(this.partner)
         },
+        // created() {
+        //     this.fetchMessages();
+        // },
         methods: {
-            makeChat(messageInfo) {
-                console.log(this.myInfo);
 
-            },
+            // fetchMessages() {
+            //
+            //     if(this.partner == []) {
+            //         return false;
+            //     } else {
+            //         if(this.lastInsertMessageId != '') {
+            //             var lastMessageId = {
+            //                 'id' : this.lastInsertMessageId,
+            //                 'from_id': this.myInfo.id,
+            //                 'to_id': this.partner.id
+            //             };
+            //         } else {
+            //             var lastMessageId = {
+            //                 'id' : this.messages[this.messages.length - 1].id,
+            //                 'from_id': this.myInfo.id,
+            //                 'to_id':   this.partner.id
+            //             };
+            //
+            //         }
+            //         axios.post('/home/getLastMessages', lastMessageId).then(response => {
+            //             for(let i = 0; i < response.data.length; i ++) {
+            //
+            //                 this.messages.push(response.data[i])
+            //                 this.lastInsertMessageId = response.data[i].id;
+            //                 $("#scrollTop").animate({scrollTop:$(document).height()}, 'slow');
+            //             }
+            //         })
+            //     }
+            // },
             SendMessage() {
 
-                let newMessage = {
+                // let newMessage = {
+                //     'message' : this.inputValue,
+                //     'user' : this.myInfo,
+                //     'to_id' : this.myInfo.id,
+                //     'from_id' : this.partner.id
+                // };
+                let newMessageFromMe = {
                     'message' : this.inputValue,
                     'user' : this.myInfo,
                     'from_id' : this.myInfo.id,
                     'to_id' : this.partner.id
-                }
+                };
 
-                window.scroll(0, 100);
-
-                axios.post('/home/addMessages', newMessage).then(response => {
-                    this.messageInfo.push(newMessage);
+                window.scrollTo(0,document.body.scrollHeight);
+                this.$emit('messagesent', newMessageFromMe);
+                Echo.private('chat').listen('MessageSent', (e) => {
+                    this.messages.push({
+                        'message': e.message.message,
+                        'from_id': e.message.from_id,
+                        'to_id': e.message.to_id,
+                        'user' : this.partner
+                    });
+                    console.log(e);
+                    return false;
+                });
+                axios.post('/home/addMessages', newMessageFromMe).then(response => {
+                    this.messages.push(newMessageFromMe);
                     this.inputValue = '';
-                    this.lastInsertMessageId = response.data;
-                    console.log(this.messageInfo.length);
+                    this.lastInsertMessageId = response.data.id;
                 })
 
 
 
             },
-            getMessages() {
-
-                this.polling = setInterval(() => {
-                    if(this.partner == []) {
-                        return false;
-                    } else {
-                        if(this.lastInsertMessageId != '') {
-                            var lastMessageId = {
-                                'id' : this.lastInsertMessageId,
-                                'from_id': this.myInfo.id,
-                                'to_id': this.partner.id
-                            };
-                        } else {
-                            var lastMessageId = {
-                                'id' : this.messageInfo[this.messageInfo.length - 1].id,
-                                'from_id': this.myInfo.id,
-                                'to_id':   this.partner.id
-                            };
-                        }
-
-                        axios.post('/home/getLastMessages', lastMessageId).then(response => {
-                            for(let i = 0; i < response.data.length; i ++) {
-
-                                this.messageInfo.push(response.data[i])
-                                this.lastInsertMessageId = response.data[i].id;
-                                $("#scrollTop").animate({scrollTop:$(document).height()}, 'slow');
-                            }
-                        })
-                    }
-
-                }, 5000)
-
-            },
+            // getMessages() {
+            //
+            //     this.polling = setInterval(() => {
+            //         if(this.partner == []) {
+            //             return false;
+            //         } else {
+            //             if(this.lastInsertMessageId != '') {
+            //                 var lastMessageId = {
+            //                     'id' : this.lastInsertMessageId,
+            //                     'from_id': this.myInfo.id,
+            //                     'to_id': this.partner.id
+            //                 };
+            //             } else {
+            //                 var lastMessageId = {
+            //                     'id' : this.messages[this.messages.length - 1].id,
+            //                     'from_id': this.myInfo.id,
+            //                     'to_id':   this.partner.id
+            //                 };
+            //             }
+            //
+            //             axios.post('/home/getLastMessages', lastMessageId).then(response => {
+            //                 for(let i = 0; i < response.data.length; i ++) {
+            //
+            //                     this.messages.push(response.data[i])
+            //                     this.lastInsertMessageId = response.data[i].id;
+            //                     $("#scrollTop").animate({scrollTop:$(document).height()}, 'slow');
+            //                 }
+            //             })
+            //         }
+            //
+            //     }, 5000)
+            //
+            // },
             searchUser() {
                 this.first = false;
                 this.second = true;
@@ -272,7 +316,6 @@
                 axios.post('/getUsers', {
                     name: this.userName
                 }).then(response => {
-                    console.log(response.data);
                     if(response.data.length == 0) {
                         alert("User "+this.userName+ "not found")
                     } else {
@@ -281,34 +324,34 @@
                 })
             },
             selectUser(user) {
-                this.messageInfo = [];
+                this.messages = [];
                 this.partner = user;
                 let info = {
                     'from_id': this.myInfo.id,
                     'to_id': user.id
                 };
-                console.log(user);
+
                 axios.post('/get/messages', info).then(response => {
-                    this.messageInfo = response.data;
-                    this.getMessages();
-                    console.log(this.messageInfo);
+                    this.messages = response.data;
+                    // this.getMessages();
+                    this.fetchMessages();
                 })
             },
-            getPartners(partner) {
-
-                // this.polling = setInterval(() => {
-                //     console.log(Object.keys(this.part).length, 'this part length');
-                //     // if(Object.keys(this.part).length != 0) {
-                //     //     for(let i = 0; i < this.part.length; i++) {
-                //     //         if(this.part[i].id != this.myInfo.id) {
-                //     //             this.partnerId.push(this.friends[i].id)
-                //     //             alert();
-                //     //         }
-                //     //     }
-                //     // }
-                //     // console.log(this.part);
-                // }, 500);
-            }
+            // getPartners(partner) {
+            //
+            //     // this.polling = setInterval(() => {
+            //     //     console.log(Object.keys(this.part).length, 'this part length');
+            //     //     // if(Object.keys(this.part).length != 0) {
+            //     //     //     for(let i = 0; i < this.part.length; i++) {
+            //     //     //         if(this.part[i].id != this.myInfo.id) {
+            //     //     //             this.partnerId.push(this.friends[i].id)
+            //     //     //             alert();
+            //     //     //         }
+            //     //     //     }
+            //     //     // }
+            //     //     // console.log(this.part);
+            //     // }, 500);
+            // }
         }
     }
 </script>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageSent;
 use App\Messenger;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +15,7 @@ class MessengerController extends Controller
 
         $part = $this->getNewPartners($myInfo);
 
-        return view('messenger.index', compact('part', 'myInfo'));
+        return view('chat', compact('part', 'myInfo'));
     }
 
     public function create(Request $request)
@@ -26,7 +27,11 @@ class MessengerController extends Controller
         ]);
 
         $message = Messenger::create($data);
-        return $message->id;
+        $user = Auth::user();
+
+        broadcast(new MessageSent($user, $message))->toOthers();
+
+        return $message;
     }
 
     public function getLastMessages(Request $request)
