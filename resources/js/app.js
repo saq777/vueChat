@@ -22,6 +22,7 @@ import Vue from 'vue'
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('messenger-component', require('./components/messenger/MessengerComponent.vue').default);
+Vue.component('chat-component', require('./components/messenger/Chat.vue').default);
 Vue.component('upload-images', require('./components/uploadImage/UploadImages.vue').default);
 Vue.component('group-files', require('./components/fileGroup/fileGroup.vue').default);
 Vue.component('search-user', require('./components/search/SearchUser.vue').default);
