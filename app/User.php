@@ -53,4 +53,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(File::class);
     }
+
+    public function follower()
+    {
+        return $this->hasOne(Follower::class, "to_id", "id");
+    }
 }

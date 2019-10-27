@@ -2,43 +2,9 @@
 
 @section('content')
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
 
-                <div class="card-header">Home</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <div>
-                        <div>
-                            Name: <span> {{ $user->name }}</span>
-                        </div>
-                        <div>
-                            Email: {{ $user->email }}
-                        </div>
-
-                        <div>
-
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </div>
-    </div>
-</div>
 
     <div class="container profile-picture">
-
+        <followers-info-component v-bind:files="{{ json_encode($files) }}"></followers-info-component>
     </div>
 @endsection

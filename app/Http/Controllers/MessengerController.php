@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\MessageSent;
 use App\Messenger;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -76,23 +77,23 @@ class MessengerController extends Controller
         return json_encode($messages);
     }
 
-    public function getNewPartners($myInfo = null)
+    public function getNewPartners()
     {
 
-        if($myInfo == null) {
-            $myInfo = Auth::user();
-        }
-
         $part = [];
-        $partners = Messenger::with('user')->where('from_id', $myInfo->id)->orWhere('to_id', $myInfo->id)->get();
+        $user_id = Auth::user()->id;
+        $partners = Messenger::with('user')->where('from_id', $user_id)->orWhere('to_id', $user_id)->get();
+
 
         foreach($partners as $partner) {
-            $part[] = $partner->user;
+            if($partner->user->id == $user_id) {
+                $part[] = User::find($partner->from_id);
+            } else {
+                $part[] = $partner->user;
+            }
         }
 
-
         return array_unique($part);
-
     }
 
 }

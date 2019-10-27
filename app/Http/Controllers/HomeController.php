@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Follower;
 use Illuminate\Http\Request;
 use App\User;
+use App\File as Files;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -28,8 +30,23 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
+        $followerId = [];
+        $followers = Follower::where("from_id", $user->id)
+                ->orderBy('id', 'desc')
+                ->limit(10)
+                ->get('to_id');
+        foreach($followers as $follower) {
+            $followerId[] = $follower->to_id;
+        }
 
-        return view('home', compact('user'));
+        $files = Files::with(['user', 'image' => function($query) {
+            $query->orderBy('id', 'desc');
+        }])
+            ->whereIn("user_id", $followerId)
+            ->orderBy('id', 'desc')
+            ->get();
+
+        return view('home', compact('user', 'files'));
     }
 
     public function select(Request $request)

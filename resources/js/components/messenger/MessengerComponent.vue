@@ -112,6 +112,9 @@
                 messagePart: ''
             }
         },
+        mounted() {
+            this.getFriends();
+        },
         methods: {
             // fetchMessages() {
             //
@@ -142,6 +145,11 @@
             //         })
             //     }
             // },
+            getFriends() {
+                axios.post("getNewPartners").then(response => {
+                    this.friends = response.data;
+                })
+            },
             searchUser() {
                 this.first = false;
                 this.second = true;

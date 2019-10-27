@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -29,13 +29,17 @@ Route::middleware('auth')->group(function(){
         Route::get('/files-group', 'FilesController@index');
         Route::post('/addMessages', 'MessengerController@create');
         Route::post('/getLastMessages', 'MessengerController@getLastMessages');
+        Route::post('/getNewPartners', 'MessengerController@getNewPartners');
         Route::post('update/profile/picture', 'HomeController@updateProfile');
     });
 
     Route::post('/uploadImage', 'ImagesController@uploadImage');
+    Route::delete('/deleteImage/{id}', 'ImagesController@deletedImage');
     Route::post('/addRepository', 'FilesController@create');
     Route::post('/deleteRepository', 'FilesController@delete');
     Route::post('/getUsers', 'HomeController@select');
     Route::post('/get/messages', 'MessengerController@getMessages');
+    Route::post('/user/unFollow/{follow_id}', 'GuestController@unFollow');
+    Route::post('/user/follow/{guest_id}', 'GuestController@follow');
 
 });

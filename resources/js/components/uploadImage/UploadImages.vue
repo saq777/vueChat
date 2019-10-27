@@ -14,15 +14,19 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-2" v-for="(image, index) in otherImages">
-                    <img :src="'/images/images-user-'+myInfo.id+'/'+image.name" width="150px">
+                <div class="col-md-2 user-image" v-for="(image, index) in otherImages" :id="'image_'+image.id">
+                    <div>
+                        <img :src="'/images/images-user-'+myInfo.id+'/'+image.name" width="150px">
+                    </div>
+                    <div class="mt-2">
+                        <button class="btn btn-danger" @click="deleteImage(image.id)">
+                            X
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </template>
 
 <script>
@@ -79,6 +83,14 @@
                         this.otherImages.push(response.data[i]);
                     }
                     this.form = new FormData;
+                })
+            },
+
+            deleteImage(image_id) {
+                console.log('/deleteImage/'+image_id);
+                axios.delete('/deleteImage/'+image_id).then(response => {
+                    console.log(response);
+                    $("#image_"+image_id).remove()
                 })
             }
         }

@@ -14,4 +14,9 @@ class Messenger extends Model
     {
         return $this->belongsTo(User::class, 'to_id', 'id');
     }
+
+    public function userFrom()
+    {
+        return $this->belongsTo(User::class, 'from_id', 'id');
+    }
 }

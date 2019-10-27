@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 use App\Image;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,6 +42,21 @@ class ImagesController extends Controller
         }
 
         return $allImages;
+    }
+
+    public function deletedImage($image_id)
+    {
+        $image = Image::find($image_id);
+
+        if(!is_null($image)) {
+            $image->delete();
+            return $image;
+        } else {
+            return response()->json([
+                "success" => false,
+                "message" => "Image does not find"
+            ]);
+        }
     }
 
 }

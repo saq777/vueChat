@@ -27,6 +27,7 @@ Vue.component('upload-images', require('./components/uploadImage/UploadImages.vu
 Vue.component('group-files', require('./components/fileGroup/fileGroup.vue').default);
 Vue.component('search-user', require('./components/search/SearchUser.vue').default);
 Vue.component('guest-component', require('./components/guest/GuestComponent.vue').default);
+Vue.component('followers-info-component', require('./components/guest/FollowersInfoComponent.vue').default);
 Vue.component('guest-images-component', require('./components/guest/GuestImagesComponent.vue').default);
 Vue.component('profile-picture-component', require('./components/home/ProfilePictureComponent.vue').default);
 

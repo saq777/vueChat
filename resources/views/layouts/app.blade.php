@@ -26,14 +26,13 @@
 </head>
 <body>
     <div id="app">
-        <div id="myNav" class="overlay">
+        <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
                 <a href="/home/messenger">Messenger</a>
                 <a href="/home/files-group">Upload Image</a>
                 <a href="#">Clients</a>
                 <a href="#">Contact</a>
-                <search-user></search-user>
             </div>
         </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -46,13 +45,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li>
-                            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-                        </li>
-                    </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -88,10 +80,25 @@
                 </div>
             </div>
         </nav>
+    @guest
+
+
+    @else
+        <section class="container mt-3">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                </li>
+            </ul>
+        </section>
+
+        @endguest
 
         <main class="py-4">
             @yield('content')
         </main>
+        <a id="button"></a>
     </div>
 </body>
 </html>
