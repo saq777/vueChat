@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function(){
 
     Route::post('/uploadImage', 'ImagesController@uploadImage');
     Route::delete('/deleteImage/{id}', 'ImagesController@deletedImage');
+    Route::put('/likeImage/{id}', 'ImagesController@likeImage');
     Route::post('/addRepository', 'FilesController@create');
     Route::post('/deleteRepository', 'FilesController@delete');
     Route::post('/getUsers', 'HomeController@select');

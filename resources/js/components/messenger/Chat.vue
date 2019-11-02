@@ -3,8 +3,8 @@
         <div class="card-header msg_head">
             <div class="d-flex bd-highlight">
                 <div class="img_cont">
-                    <div v-if="partner.avatar == null">
-                        <a :href="'/home/guest/'+partner.id">
+                    <div v-if="part.avatar == null">
+                        <a :href="'/home/guest/'+part.id">
                             <img
                                 src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
                                 class="rounded-circle" width="70px">
@@ -12,17 +12,17 @@
                         </a>
                     </div>
                     <div v-else>
-                        <a :href="'/home/guest/'+partner.id">
+                        <a :href="'/home/guest/'+part.id">
                             <img
-                                :src="'/images/profile/'+partner.id+'/'+partner.avatar"
+                                :src="'/images/profile/'+part.id+'/'+part.avatar"
                                 class="rounded-circle" width="70px" height="70px">
                             <span class="online_icon"></span>
                         </a>
                     </div>
                 </div>
                 <div class="user_info">
-                    <span>Chat with {{ partner.name }}</span>
-                    <p>{{ partner.length }}</p>
+                    <span>Chat with {{ part.name }}</span>
+                    <p>{{ part.length }}</p>
                 </div>
                 <div class="video_cam">
                     <span><i class="fas fa-video"></i></span>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-start mb-4" v-else>
-                    <div class="img_cont_msg" v-if="partner.avatar == null">
+                    <div class="img_cont_msg" v-if="part.avatar == null">
                         <a :href="'/home/guest/'+message.from_id">
                             <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
                                  class="rounded-circle user_img_msg">
@@ -66,7 +66,7 @@
                     <div v-else>
                         <div class="badge badge-pill badge-primary" v-show="typing">typing...</div>
                         <img
-                            :src="'/images/profile/'+partner.id+'/'+partner.avatar"
+                            :src="'/images/profile/'+part.id+'/'+part.avatar"
                             class="rounded-circle user_img_msg">
                     </div>
                     <div class="msg_cotainer">
@@ -136,7 +136,7 @@
                     'message': e.message.message,
                     'from_id': e.message.from_id,
                     'to_id': e.message.to_id,
-                    'user' : this.partner
+                    'user' : this.part
                 }
                 this.messages.push(arr);
                 console.log(e);
@@ -165,7 +165,7 @@
                     'message' : this.inputValue,
                     'user' : this.myInfo,
                     'from_id' : this.myInfo.id,
-                    'to_id' : this.partner.id
+                    'to_id' : this.part.id
                 };
                 console.log(newMessageFromMe, 'newMessageFromMe');
                 window.scrollTo(0,document.body.scrollHeight);

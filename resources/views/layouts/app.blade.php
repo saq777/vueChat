@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" defer></script>
+    <link rel="icon" href="{{ asset('images/logo.png') }}">
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -26,19 +28,17 @@
 </head>
 <body>
     <div id="app">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="/home/messenger">Messenger</a>
-                <a href="/home/files-group">Upload Image</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
+
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name', 'home') }}
+                    <span>
+                        <img src="{{ asset('images/logo.png') }}" alt="logo" width="40px" class="pr-3">
+                    </span>
+                    <span>
+                        {{ config('app.name', 'home') }}
+                    </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -80,25 +80,36 @@
                 </div>
             </div>
         </nav>
-    @guest
 
-
-    @else
-        <section class="container mt-3">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-                <li>
-                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-                </li>
-            </ul>
-        </section>
-
-        @endguest
 
         <main class="py-4">
             @yield('content')
         </main>
         <a id="button"></a>
     </div>
+    @auth
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="home col-md-4 footer-icon">
+                        <a href="{{ url("/home") }}">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </div>
+                    <div class="messenger col-md-4 footer-icon">
+                        <a href="{{ url("/home/messenger") }}">
+                            <i class="far fa-comment-dots"></i>
+                        </a>
+                    </div>
+                    <div class="uploadImage col-md-4 footer-icon">
+                        <a href="{{ url("/home/files-group") }}">
+                            <i class="fas fa-file-upload"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    @endauth
 </body>
 </html>

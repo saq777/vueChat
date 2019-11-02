@@ -5,6 +5,6 @@
 
 
     <div class="container profile-picture">
-        <followers-info-component v-bind:files="{{ json_encode($files) }}"></followers-info-component>
+        <followers-info-component v-bind:images="{{ json_encode($images) }}"></followers-info-component>
     </div>
 @endsection

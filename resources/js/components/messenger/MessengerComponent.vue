@@ -73,10 +73,17 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-xl-6 chat" v-if="partner.id != null">
-                    <chat-component
-                        v-bind:my-info="myInfo"
-                        v-bind:part="partner"
-                        v-bind:mess="messages"></chat-component>
+                    <div class="position-relative">
+                        <chat-component
+                                id="chatComponent"
+                                v-bind:my-info="myInfo"
+                                v-bind:part="partner"
+                                v-bind:mess="messages"></chat-component>
+                        <div class="position-absolute btn btn-danger rounded-circle" style="top: 0; right: 0;" @click="closeChat">
+                           X
+                        </div>
+                    </div>
+
                 </div>
                 <div v-else>
                     <profile-picture-component
@@ -171,6 +178,9 @@
                 })
             },
             selectUser(user) {
+
+                this.closeChat()
+                console.log(user);
                 this.partner = user;
                 let info = {
                     'from_id': this.myInfo.id,
@@ -184,6 +194,11 @@
                 })
 
             },
+             closeChat() {
+                 this.partner = {
+                     "id": null
+                 };
+             }
         }
     }
 </script>

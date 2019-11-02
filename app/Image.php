@@ -19,4 +19,14 @@ class Image extends Model
     {
         return $this->belongsTo(File::class, 'file_id', 'id');
     }
+
+    public function like()
+    {
+        return $this->hasMany(Like::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 }
