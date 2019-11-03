@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Follower;
 use App\Image;
+use App\Story;
 use Illuminate\Http\Request;
 use App\User;
 use App\File as Files;
@@ -41,6 +42,8 @@ class HomeController extends Controller
             $followerId[] = $follower->to_id;
         }
 
+        $stories = Story::with("user")->whereIn("user_id", $followerId)->get();
+
         $images = Image::with(['user', 'likes','like' => function($query) use ($user_id) {
             $query->where("user_id", $user_id)->select("image_id");
         }])
@@ -48,7 +51,7 @@ class HomeController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
-        return view('home', compact('user', 'images'));
+        return view('home', compact('user', 'images', 'stories'));
     }
 
     public function select(Request $request)

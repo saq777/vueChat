@@ -43,4 +43,9 @@ Route::middleware('auth')->group(function(){
     Route::post('/user/unFollow/{follow_id}', 'GuestController@unFollow');
     Route::post('/user/follow/{guest_id}', 'GuestController@follow');
 
+
+    Route::prefix("/settings")->group(function() {
+        Route::get('/', 'SettingsController@index');
+        Route::put('/notification', 'SettingsController@notification');
+    });
 });

@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" defer></script>
+    <script src="{{ asset('slick/slick.js') }}" defer></script>
     <link rel="icon" href="{{ asset('images/logo.png') }}">
 
 
@@ -23,6 +24,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('slick/slick.css') }}" rel="stylesheet">
+    <link href="{{ asset('slick/slick-theme.css') }}" rel="stylesheet">
     {{--font Aweswome--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -73,6 +76,9 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                                    <a class="dropdown-item" href="{{ url('/settings') }}">
+                                        {{ __('Settings') }}
+                                    </a>
                                 </div>
                             </li>
                         @endguest

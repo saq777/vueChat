@@ -19,6 +19,15 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop:0}, '300');
     });
 
+    $('.slider-wrapper-2').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        rows: 1,
+        swipeToSlide: true
+    });
+
+
+
 
 });
 

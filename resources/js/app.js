@@ -30,6 +30,9 @@ Vue.component('guest-component', require('./components/guest/GuestComponent.vue'
 Vue.component('followers-info-component', require('./components/guest/FollowersInfoComponent.vue').default);
 Vue.component('guest-images-component', require('./components/guest/GuestImagesComponent.vue').default);
 Vue.component('profile-picture-component', require('./components/home/ProfilePictureComponent.vue').default);
+Vue.component('settings-component', require('./components/settings/SettingsComponent.vue').default);
+Vue.component('story-component', require('./components/stories/StoryComponent.vue').default);
+Vue.component('story-modal', require('./components/stories/StoryModal.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

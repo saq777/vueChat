@@ -137,14 +137,14 @@
                     'from_id': e.message.from_id,
                     'to_id': e.message.to_id,
                     'user' : this.part
-                }
+                };
                 this.messages.push(arr);
                 console.log(e);
 
             }).listenForWhisper('typing', (e) => {
                 this.typing = e.typing;
                 setTimeout(function() {
-                    _this.typing = false;
+                    this.typing = false;
                 }, 5000);
             })
                 .listenForWhisper('deleting', (e) => {
