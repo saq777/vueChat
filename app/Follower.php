@@ -16,5 +16,8 @@ class Follower extends Model
         return $this->belongsTo(User::class, "to_id", "id");
     }
 
-
+    public function story()
+    {
+        return $this->hasMany(Story::class, "user_id", "to_id");
+    }
 }

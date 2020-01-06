@@ -13,7 +13,7 @@
                         Email: {{guestInfo.email}}
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" v-if="guestInfo.id !== authId">
                     <div v-if="checkFollow">
                         <button class="btn btn-danger" @click="unFollow()">
                             UnFollow
@@ -45,7 +45,7 @@
 <script>
     export default {
         name: "GuestComponent",
-        props: ['guestInfo'],
+        props: ['guestInfo', 'authId'],
         data() {
           return {
               files: '',
@@ -58,7 +58,7 @@
             if(this.guestInfo.avatar == null) {
                 this.imagePath = "/images/avatar.png";
             } else {
-                this.imagePath = '/images/profile/'+this.guestInfo.id+'/'+this.guestInfo.avatar
+                this.imagePath = this.guestInfo.avatar
             }
             this.userCheckFollow()
         },

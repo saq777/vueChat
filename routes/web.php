@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function(){
     });
 
     Route::post('/uploadImage', 'ImagesController@uploadImage');
+    Route::post('/uploadStory', 'StoryController@store');
     Route::delete('/deleteImage/{id}', 'ImagesController@deletedImage');
     Route::put('/likeImage/{id}', 'ImagesController@likeImage');
     Route::post('/addRepository', 'FilesController@create');

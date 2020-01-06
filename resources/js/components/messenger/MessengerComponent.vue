@@ -20,15 +20,9 @@
                                     <div>
                                         <div class="d-flex bd-highlight" @click="selectUser(friend)">
                                             <div class="img_cont">
-                                                <div v-if="friend.avatar == null">
+                                                <div>
                                                     <img
-                                                        src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
-                                                        class="rounded-circle" width="70px">
-                                                    <span class="online_icon"></span>
-                                                </div>
-                                                <div v-else>
-                                                    <img
-                                                        :src="'/images/profile/'+friend.id+'/'+friend.avatar"
+                                                        :src="friend.avatar"
                                                         class="rounded-circle" width="70px" height="70px">
                                                     <span class="online_icon"></span>
                                                 </div>
@@ -47,15 +41,9 @@
                                 <li class="active" v-for="user in users" v-show="second">
                                     <div class="d-flex bd-highlight" @click="selectUser(user)">
                                         <div class="img_cont">
-                                            <div v-if="user.avatar == null">
+                                            <div>
                                                 <img
-                                                    src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
-                                                    class="rounded-circle" width="70px">
-                                                <span class="online_icon"></span>
-                                            </div>
-                                            <div v-else>
-                                                <img
-                                                    :src="'/images/profile/'+user.id+'/'+user.avatar"
+                                                    :src="user.avatar"
                                                     class="rounded-circle" width="70px" height="70px">
                                                 <span class="online_icon"></span>
                                             </div>
@@ -102,20 +90,14 @@
         props: [ 'myInfo', 'part'],
         data() {
             return {
-                ImagePath: 'http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg',
                 messages: [],
-                inputValue: '',
-                newMessage: [],
                 lastInsertMessageId: '',
-                // lastMessageId: '',
-                polling: null,
                 userName: '',
                 users: '',
                 partner: '',
                 friends: '',
                 first: true,
                 second: false,
-                partnerId: [],
                 messagePart: ''
             }
         },
@@ -123,35 +105,6 @@
             this.getFriends();
         },
         methods: {
-            // fetchMessages() {
-            //
-            //     if(this.partner == []) {
-            //         return false;
-            //     } else {
-            //         if(this.lastInsertMessageId != '') {
-            //             var lastMessageId = {
-            //                 'id' : this.lastInsertMessageId,
-            //                 'from_id': this.myInfo.id,
-            //                 'to_id': this.partner.id
-            //             };
-            //         } else {
-            //             var lastMessageId = {
-            //                 'id' : this.messages[this.messages.length - 1].id,
-            //                 'from_id': this.myInfo.id,
-            //                 'to_id':   this.partner.id
-            //             };
-            //
-            //         }
-            //         axios.post('/home/getLastMessages', lastMessageId).then(response => {
-            //             for(let i = 0; i < response.data.length; i ++) {
-            //
-            //                 this.messages.push(response.data[i])
-            //                 this.lastInsertMessageId = response.data[i].id;
-            //                 $("#scrollTop").animate({scrollTop:$(document).height()}, 'slow');
-            //             }
-            //         })
-            //     }
-            // },
             getFriends() {
                 axios.post("getNewPartners").then(response => {
                     this.friends = response.data;

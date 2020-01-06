@@ -1,15 +1,21 @@
 <template>
-    <section>
-        <div class="row">
-            <div class="col-md-2">
+    <section class="overflow-hidden">
+        <div>
+            <div class="float-left">
                 <div class="rounded-circle border story-div" @click="openModal()">
                     <i class="fas fa-history"></i>
                 </div>
             </div>
 
-            <div class="slider-wrapper-2 col-md-10 row" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+
+            <div class="horizontal-scroll-wrapper squares">
                 <div v-for="story in stories">
-                    <img :src="story.image" alt="" class="rounded-circle" width="100px" height="100px">
+                    <div>
+                        <img :src="story.image" alt="" class="child rounded-circle" width="100px" height="100px">
+                    </div>
+                    <div>
+                        <img :src="story.user.avatar" alt="" width="30px" height="30px" class="rounded-circle small-story-avatar">
+                    </div>
                 </div>
             </div>
         </div>

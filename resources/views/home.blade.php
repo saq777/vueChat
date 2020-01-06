@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <div class="container">
+    <div class="container story-parent-div">
         <story-component
         v-bind:stories="{{ json_encode($stories) }}">
         </story-component>

@@ -19,7 +19,15 @@ class GuestController extends Controller
         $guestInfo = User::with( ['files', 'follower' => function($query) use ($user_id) {
             $query->where("from_id", $user_id);
         }])->find($id);
-        return view('guest.index', compact('guestInfo'));
+
+        $images = Image::with(['user', 'likes','like' => function($query) use ($user_id) {
+            $query->where("user_id", $user_id)->select("image_id");
+        }])
+            ->where("user_id", $id)
+            ->orderBy('id', 'desc')
+            ->get();
+
+        return view('guest.index', compact('guestInfo', 'images'));
     }
 
     public function getGuestImages($id)

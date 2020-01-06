@@ -7,13 +7,10 @@
                     <a :href="'/home/guest/'+image.user.id">
                         <div class="col-md-6 overflow-hidden border-bottom row mb-1">
                             <div>
-                                <span class="col-md-1" v-if="image.user.avatar != null">
-                                <img :src="'images/profile/'+image.user.id+'/'+image.user.avatar" alt="" class="rounded-circle avatar" width="50px">
+                                <span class="col-md-1">
+                                <img :src="image.user.avatar" alt="" class="rounded-circle avatar" width="50px">
                             </span>
-                                <span class="col-md-1" v-else>
-                                <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
-                                     class="rounded-circle user_img_msg" width="50px">
-                            </span>
+
                                 <span>
                                 {{ image.user.name }}
                             </span>
@@ -34,13 +31,13 @@
                         <div class="mt-2 col-md-6 fa-heart-div" align="left" v-if="image.like.length == 0">
                             <i class="far fa-heart" @click="likeImage(image.id, key)"></i>
                             <div>
-                                {{ image.like.length }}
+                                {{ image.likes.length }}
                             </div>
                         </div>
                         <div class="mt-2 col-md-6 fa-heart-div" align="left" v-else>
                             <i class="fas fa-heart like" @click="likeImage(image.id, key)"></i>
                             <div>
-                                {{ image.like.length }}
+                                {{ image.likes.length }}
                             </div>
                         </div>
 

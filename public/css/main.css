@@ -284,6 +284,39 @@ footer {
     transform: rotate(360deg);
 }
 
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+
+div{
+    box-sizing:border-box;
+}
+
+
+.horizontal-scroll-wrapper{
+    width:120px;
+    max-height:700px;
+    margin:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+    transform:rotate(-90deg) translateY(-80px);
+    transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+    transform:rotate(90deg);
+    margin-bottom : 30px;
+    margin-left : 20px;
+    position: relative;
+}
+
+.small-story-avatar {
+    position: absolute;
+    right: 0;
+    bottom: 5px
+}
+
+.story-parent-div {
+    height: 100px !important;
+}
 
 @media (min-width: 500px) {
     #button {

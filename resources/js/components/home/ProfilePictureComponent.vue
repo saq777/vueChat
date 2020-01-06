@@ -4,10 +4,7 @@
             <div class="row">
                 <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4 pl-5">
                     <div>
-                        <div v-if="userInfo.avatar == null"  class="rounded-circle">
-                            <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img" width="100px">
-                        </div>
-                        <div v-else class="rounded-circle">
+                        <div class="rounded-circle">
                             <img :src="src" width="122px"/>
                         </div>
                     </div>
@@ -61,7 +58,7 @@
                 if(this.userInfo.avatar == null) {
                     this.avatar = true;
                 } else {
-                    this.src = '/images/profile/'+this.userInfo.id+'/'+this.userInfo.avatar;
+                    this.src = this.userInfo.avatar;
                     this.avatar = false;
                 }
             },
@@ -74,7 +71,7 @@
 
                 axios.post('update/profile/picture', this.form).then(response => {
                     this.user = response.data;
-                    this.src = '/images/profile/'+this.userInfo.id+'/'+response.data.avatar;
+                    this.src = response.data.avatar;
                     this.avatar = false;
                 })
             },

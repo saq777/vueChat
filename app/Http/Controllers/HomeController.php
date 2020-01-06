@@ -31,7 +31,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
+        $user = auth()->user();
         $user_id = $user->id;
         $followerId = [];
         $followers = Follower::where("from_id", $user_id)
@@ -42,12 +42,14 @@ class HomeController extends Controller
             $followerId[] = $follower->to_id;
         }
 
+        $followerId[] = $user_id;
+
         $stories = Story::with("user")->whereIn("user_id", $followerId)->get();
 
         $images = Image::with(['user', 'likes','like' => function($query) use ($user_id) {
             $query->where("user_id", $user_id)->select("image_id");
         }])
-            ->whereIn("user_id", $followers)
+            ->whereIn("user_id", $followerId)
             ->orderBy('id', 'desc')
             ->get();
 
@@ -63,22 +65,22 @@ class HomeController extends Controller
 
     public function updateProfile(Request $request)
     {
-        $userInfo = Auth::user();
+        $userInfo = auth()->user();
 
         $uploadImage = $request->pic;
 
         $fileName = str_random( 20);
         $format = explode('.', $uploadImage->getClientOriginalName());
         $fullName =  $fileName.'.'.end($format);
-        $path = $uploadImage->move('images/profile/'.$userInfo->id, $fullName);
-//        if(File::exists('images/profile/'.$userInfo->id)) {
-            File::delete('images/profile/'.$userInfo->id.'/'.$userInfo->avatar);
-//        }
+        $uploadImage->move('images/profile/'.$userInfo->id, $fullName);
+        $path = '/images/profile/'.$userInfo->id.'/'.$fullName;
+        if($userInfo->avatar != "/images/avatar.png") {
+            File::delete($userInfo->avatar);
+        }
 
-        $user = User::find($userInfo->id);
-        $user->avatar = $fullName;
-        $user->save();
+        $userInfo->avatar = $path;
+        $userInfo->save();
 
-        return $user;
+        return $userInfo;
     }
 }

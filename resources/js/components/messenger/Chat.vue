@@ -3,18 +3,10 @@
         <div class="card-header msg_head">
             <div class="d-flex bd-highlight">
                 <div class="img_cont">
-                    <div v-if="part.avatar == null">
+                    <div>
                         <a :href="'/home/guest/'+part.id">
                             <img
-                                src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
-                                class="rounded-circle" width="70px">
-                            <span class="online_icon"></span>
-                        </a>
-                    </div>
-                    <div v-else>
-                        <a :href="'/home/guest/'+part.id">
-                            <img
-                                :src="'/images/profile/'+part.id+'/'+part.avatar"
+                                :src="part.avatar"
                                 class="rounded-circle" width="70px" height="70px">
                             <span class="online_icon"></span>
                         </a>
@@ -45,28 +37,17 @@
                     <div class="msg_cotainer_send">
                         <p>{{message.message}}</p>
                     </div>
-                    <div class="img_cont_msg" v-if="myInfo.avatar == null">
+                    <div class="img_cont_msg">
                         <img
-                            src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
-                            class="rounded-circle user_img_msg">
-                    </div>
-                    <div class="img_cont_msg" v-else>
-                        <img
-                            :src="'/images/profile/'+myInfo.id+'/'+myInfo.avatar"
+                            :src="myInfo.avatar"
                             class="rounded-circle user_img_msg">
                     </div>
                 </div>
                 <div class="d-flex justify-content-start mb-4" v-else>
-                    <div class="img_cont_msg" v-if="part.avatar == null">
-                        <a :href="'/home/guest/'+message.from_id">
-                            <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png"
-                                 class="rounded-circle user_img_msg">
-                        </a>
-                    </div>
-                    <div v-else>
+                    <div>
                         <div class="badge badge-pill badge-primary" v-show="typing">typing...</div>
                         <img
-                            :src="'/images/profile/'+part.id+'/'+part.avatar"
+                            :src="part.avatar"
                             class="rounded-circle user_img_msg">
                     </div>
                     <div class="msg_cotainer">
