@@ -81,7 +81,7 @@ class ImagesController extends Controller
                 Log::error("Error like image ".$e->getMessage());
                 return response()->json([
                     "status" => 400
-                ]);
+                ], 400);
             }
         } else {
             try {
@@ -94,7 +94,7 @@ class ImagesController extends Controller
                 Log::error("Error delete like image ".$e->getMessage());
                 return response()->json([
                     "status" => 400
-                ]);
+                ], 400);
             }
         }
     }
